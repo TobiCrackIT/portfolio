@@ -19,16 +19,16 @@ class DevInfo extends StatelessWidget {
             CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage(
-                'images/me.jpg',
+                'images/mee.jpg',
               ),
             ),
             Spacer(),
             Text(
-              'Meme du Meme',
+              'Oluwatobi Oluwatoyin',
               style: Theme.of(context).textTheme.subtitle1,
             ),
             Text(
-              'Flutter Developer',
+              'Mobile Developer',
               textAlign: TextAlign.center,
               style: TextStyle(
                 height: 1.5,

@@ -16,29 +16,46 @@ class KnowledgeBox extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        _KnowledgeText(title: 'Version Control with Git',),
-        _KnowledgeText(title: 'CI/CD',),
-        _KnowledgeText(title: 'Block-chain Technology',),
-        _KnowledgeText(title: 'Mobile/Web Architecture',),
+        _KnowledgeText(
+          title: 'Version Control with Git',
+        ),
+        _KnowledgeText(
+          title: 'CI/CD',
+        ),
+        _KnowledgeText(
+          title: 'Mobile/Web Architecture',
+        ),
+        _KnowledgeText(
+          title: 'Documentation',
+        ),
+        _KnowledgeText(
+          title: 'Effective Communication',
+        ),
+        _KnowledgeText(
+          title: 'Block-chain Technology',
+        ),
       ],
     );
   }
 }
 
 class _KnowledgeText extends StatelessWidget {
-
   final String? title;
-  _KnowledgeText({Key? key,this.title}):super(key: key);
+  _KnowledgeText({Key? key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: defaultPadding/2),
+      padding: const EdgeInsets.only(bottom: defaultPadding / 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SvgPicture.asset('assets/icons/svg/check.svg',),
-          SizedBox(width: defaultPadding/2,),
+          SvgPicture.asset(
+            'assets/icons/svg/check.svg',
+          ),
+          SizedBox(
+            width: defaultPadding / 2,
+          ),
           Text('$title')
         ],
       ),

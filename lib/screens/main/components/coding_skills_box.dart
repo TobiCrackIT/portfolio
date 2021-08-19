@@ -20,7 +20,7 @@ class CodingSkillsBox extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             AnimatedLinearProgressIndicator(
-              percentage: 0.75,
+              percentage: 0.80,
               title: 'Dart',
             ),
             SizedBox(
@@ -34,8 +34,15 @@ class CodingSkillsBox extends StatelessWidget {
               height: defaultPadding / 2,
             ),
             AnimatedLinearProgressIndicator(
-              percentage: 0.52,
+              percentage: 0.40,
               title: 'Solidity',
+            ),
+            SizedBox(
+              height: defaultPadding / 2,
+            ),
+            AnimatedLinearProgressIndicator(
+              percentage: 0.63,
+              title: 'Others',
             ),
           ],
         ),

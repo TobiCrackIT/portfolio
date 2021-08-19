@@ -18,17 +18,33 @@ class SkillsBox extends StatelessWidget {
           ),
         ),
         Row(
-
           children: [
-            Expanded(child: AnimatedCircularProgressIndicator(percentage: 0.72,title: 'Dart',)),
-            SizedBox(width: defaultPadding,),
-            Expanded(child: AnimatedCircularProgressIndicator(percentage: 0.80,title: 'Flutter',)),
-            SizedBox(width: defaultPadding,),
-            Expanded(child: AnimatedCircularProgressIndicator(percentage: 0.51,title: 'Go',)),
-
+            Expanded(
+                child: AnimatedCircularProgressIndicator(
+              percentage: 0.82,
+              title: 'Flutter',
+            )),
+            SizedBox(
+              width: defaultPadding,
+            ),
+            Expanded(
+                child: AnimatedCircularProgressIndicator(
+              percentage: 0.75,
+              title: 'Firebase',
+            )),
+            SizedBox(
+              width: defaultPadding,
+            ),
+            Expanded(
+                child: AnimatedCircularProgressIndicator(
+              percentage: 0.61,
+              title: 'CI/CD',
+            )),
           ],
         ),
-        SizedBox(height: defaultPadding,),
+        SizedBox(
+          height: defaultPadding,
+        ),
         Divider(),
       ],
     );
