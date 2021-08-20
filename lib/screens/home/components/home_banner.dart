@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/utils/helpers.dart';
@@ -28,13 +29,15 @@ class HomeBanner extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'I design and build beautiful mobile and \nweb products',
+                  'I design and build beautiful mobile and web products',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           )
-                      : Theme.of(context).textTheme.headline4!.copyWith(
+                      : Theme.of(context).textTheme.headline5!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
@@ -63,9 +66,24 @@ class HomeBanner extends StatelessWidget {
                         vertical: defaultPadding,
                       ),
                     ),
-                    child: Text(
-                      'EXPLORE PROJECTS',
-                      style: TextStyle(color: darkColor),
+                    child: FittedBox(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/icons/svg/github.svg',
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'EXPLORE',
+                            style: TextStyle(color: darkColor),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
               ],
