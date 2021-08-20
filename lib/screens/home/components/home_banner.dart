@@ -2,19 +2,20 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/utils/constants.dart';
+import 'package:portfolio/utils/helpers.dart';
 
 class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
+      aspectRatio: Responsive.isMobile(context) ? 2.5 : 2.8,
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(
+          /*Image.asset(
             'assets/images/bg.jpeg',
             fit: BoxFit.cover,
-          ),
+          ),*/
           Container(
             color: darkColor.withOpacity(
               0.66,
@@ -27,13 +28,13 @@ class HomeBanner extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Discover the awesome products \nI have worked on',
+                  'I design and build beautiful mobile and \nweb products',
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           )
-                      : Theme.of(context).textTheme.headline5!.copyWith(
+                      : Theme.of(context).textTheme.headline4!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
@@ -42,16 +43,19 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(
                     height: defaultPadding / 2,
                   ),
-                Responsive.isMobile(context)? Expanded(
-                  child: AnimatedText(),
-                ):AnimatedText(),
+                Responsive.isMobile(context)
+                    ? Expanded(
+                        child: AnimatedText(),
+                      )
+                    : AnimatedText(),
                 if (!Responsive.isMobileLarge(context))
                   SizedBox(
                     height: defaultPadding,
                   ),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () =>
+                        launchWebsite('https://github.com/TobiCrackIT'),
                     style: TextButton.styleFrom(
                       backgroundColor: primaryColor,
                       padding: EdgeInsets.symmetric(
@@ -60,7 +64,7 @@ class HomeBanner extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      'EXPLORE NOW',
+                      'EXPLORE PROJECTS',
                       style: TextStyle(color: darkColor),
                     ),
                   ),

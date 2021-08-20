@@ -13,7 +13,7 @@ class SkillsBox extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: Text(
-            'Skills',
+            'Framework/Database',
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
@@ -37,8 +37,8 @@ class SkillsBox extends StatelessWidget {
             ),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-              percentage: 0.61,
-              title: 'CI/CD',
+              percentage: 0.51,
+              title: 'GraphQL',
             )),
           ],
         ),

@@ -22,14 +22,10 @@ class SideMenu extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    DevInfoText(
+                    /*DevInfoText(
                       title: 'Location',
-                      subTitle: 'Nigeria',
-                    ),
-                    DevInfoText(
-                      title: 'City',
-                      subTitle: 'Internet',
-                    ),
+                      subTitle: 'Global',
+                    ),*/
                     SkillsBox(),
                     CodingSkillsBox(),
                     KnowledgeBox(),
@@ -37,23 +33,26 @@ class SideMenu extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: FittedBox(
-                        child: Row(
-                          children: [
-                            Text(
-                              'DOWNLOAD CV',
-                              style: TextStyle(
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color),
-                            ),
-                            SizedBox(
-                              width: defaultPadding / 2,
-                            ),
-                            SvgPicture.asset(
-                              'assets/icons/svg/download.svg',
-                            ),
-                          ],
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Row(
+                            children: [
+                              Text(
+                                'CV',
+                                style: TextStyle(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1!
+                                        .color),
+                              ),
+                              SizedBox(
+                                width: defaultPadding / 2,
+                              ),
+                              SvgPicture.asset(
+                                'assets/icons/svg/download.svg',
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -84,7 +83,8 @@ class SideMenu extends StatelessWidget {
                             icon: SvgPicture.asset(
                               'assets/icons/svg/twitter.svg',
                             ),
-                            onPressed: () {},
+                            onPressed: () => launchWebsite(
+                                'https://twitter.com/oluwasquared'),
                           ),
                           IconButton(
                             icon: SvgPicture.asset(

@@ -11,7 +11,7 @@ class MyProjects extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'My Projects',
+          'Projects',
           style: Theme.of(context).textTheme.headline6,
         ),
         const SizedBox(
@@ -20,15 +20,18 @@ class MyProjects extends StatelessWidget {
         Responsive(
           mobile: ProjectsGridView(
             crossAxisCount: 1,
+            childAspectRatio: 1,
           ),
           mobileLarge: ProjectsGridView(
             crossAxisCount: 2,
             childAspectRatio: 1.1,
           ),
           tablet: ProjectsGridView(
-            childAspectRatio: 1,
+            childAspectRatio: 1.1,
           ),
-          desktop: ProjectsGridView(),
+          desktop: ProjectsGridView(
+            childAspectRatio: 1.1,
+          ),
         ),
       ],
     );

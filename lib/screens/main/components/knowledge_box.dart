@@ -52,6 +52,7 @@ class _KnowledgeText extends StatelessWidget {
         children: [
           SvgPicture.asset(
             'assets/icons/svg/check.svg',
+            color: primaryColor,
           ),
           SizedBox(
             width: defaultPadding / 2,
