@@ -5,6 +5,7 @@ import 'package:portfolio/screens/main/components/dev_info.dart';
 import 'package:portfolio/screens/main/components/knowledge_box.dart';
 import 'package:portfolio/screens/main/components/skills_box.dart';
 import 'package:portfolio/utils/constants.dart';
+import 'package:portfolio/utils/helpers.dart';
 
 class SideMenu extends StatelessWidget {
   @override
@@ -65,18 +66,19 @@ class SideMenu extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Spacer(),
-
                           IconButton(
                             icon: SvgPicture.asset(
                               'assets/icons/svg/github.svg',
                             ),
-                            onPressed: () {},
+                            onPressed: () =>
+                                launchWebsite('https://github.com/TobiCrackIT'),
                           ),
                           IconButton(
                             icon: SvgPicture.asset(
                               'assets/icons/svg/linkedin.svg',
                             ),
-                            onPressed: () {},
+                            onPressed: () => launchWebsite(
+                                'https://www.linkedin.com/in/oluwatobi-oluwatoyin/'),
                           ),
                           IconButton(
                             icon: SvgPicture.asset(
@@ -88,7 +90,8 @@ class SideMenu extends StatelessWidget {
                             icon: SvgPicture.asset(
                               'assets/icons/svg/behance.svg',
                             ),
-                            onPressed: () {},
+                            onPressed: () => launchWebsite(
+                                'https://www.behance.net/oluwatobig'),
                           ),
                           Spacer(),
                         ],

@@ -26,7 +26,7 @@ class MyProjects extends StatelessWidget {
             childAspectRatio: 1.1,
           ),
           tablet: ProjectsGridView(
-            childAspectRatio: 1.2,
+            childAspectRatio: 1,
           ),
           desktop: ProjectsGridView(),
         ),
