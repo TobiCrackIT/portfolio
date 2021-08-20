@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/screens/main/components/coding_skills_box.dart';
@@ -31,7 +32,8 @@ class SideMenu extends StatelessWidget {
                     KnowledgeBox(),
                     Divider(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () => launchWebsite(
+                          'https://drive.google.com/file/d/1t72kdLBg-76sD4_5UcALKj-mAVrdyzMf/view?usp=sharing'),
                       child: FittedBox(
                         child: Padding(
                           padding: EdgeInsets.all(8),
@@ -96,6 +98,39 @@ class SideMenu extends StatelessWidget {
                           Spacer(),
                         ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Built with ',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText1!
+                              .copyWith(color: primaryColor),
+                        ),
+                        Icon(
+                          CupertinoIcons.heart_fill,
+                          color: Colors.red,
+                        ),
+                        Text(
+                          'with Flutter ',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText1!
+                              .copyWith(color: primaryColor),
+                        ),
+                        Icon(
+                          CupertinoIcons.heart_fill,
+                          color: Colors.blue,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),

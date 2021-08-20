@@ -33,6 +33,7 @@ class DevInfo extends StatelessWidget {
               style: TextStyle(
                 height: 1.5,
                 fontWeight: FontWeight.w300,
+                color: primaryColor
               ),
             ),
             Spacer(
